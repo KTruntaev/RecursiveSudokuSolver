@@ -167,7 +167,11 @@ public class Table {
             for (int j = 0; j < squares[i].length; j++) {
                 if (j % 3 == 0)
                     System.out.print("| ");
-                System.out.print(squares[i][j].getCurrentValue() + " | ");
+
+                if(squares[i][j].getCurrentValue() == 0)
+                    System.out.print(" " + " | ");
+                else
+                    System.out.print(squares[i][j].getCurrentValue() + " | ");
 
                 if (j == 2 || j == 5)
                     System.out.print("\t");
